@@ -19,7 +19,4 @@ public class AccountConstants {
     public static final String DBA = "bankName";
 
 
-    //TODO: Make it so this a budgeting app. Connect to Charles Schwab, DCU, AmeriCU, Citibank, Amex, Discover, Chase
-
-
 }
