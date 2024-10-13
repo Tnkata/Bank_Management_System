@@ -7,6 +7,7 @@ import static com.bankingApplication.springboot_bankingApp.Constants.AccountCons
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Builder;
 import lombok.Getter;
@@ -20,17 +21,14 @@ import lombok.Setter;
 public class AccountRequest {
 
     @JsonProperty(FIRST_NAME)
-    @NotNull(message = INVALID_ERROR_MESSAGE)
+    @NotBlank(message = INVALID_ERROR_MESSAGE)
     private String firstName;
 
     @JsonProperty(LAST_NAME)
-    @NotNull(message = INVALID_ERROR_MESSAGE)
+    @NotBlank(message = INVALID_ERROR_MESSAGE)
     private String lastName;
 
     @JsonProperty(INITIAL_FEE)
-    @NotNull(message = INVALID_ERROR_MESSAGE)
+    @NotBlank(message = INVALID_ERROR_MESSAGE)
     private String fee;
-
-    @JsonProperty()
-    private String customerId;
 }
